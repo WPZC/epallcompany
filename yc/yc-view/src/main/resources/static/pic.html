@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+<form action="/data/updateById" method="post" enctype="multipart/form-data">
+    <label>上传图片</label>
+    <input type="text" name="id">
+    <input type="text" name="msg">
+    <input type="file" name="file"/>
+    <input type="submit" value="上传"/>
+</form>
+
+<p>图片:</p>
+<img src="${filename}"/>
+</body>
+<script>
+    function severCheck() {
+
+        var formData = new FormData();
+
+
+        formData.append("id",  city);
+
+        formData.append("msg", userName);
+
+
+
+        $.ajax({
+
+            type : "POST",
+
+            url : "<%=path%>/editUserInfo",
+
+            data : formData,
+
+            cache : false,
+
+            processData : false,
+
+            contentType : false,
+
+            success : function(data) {
+
+                window.location.reload();
+
+
+            },
+
+            error:function(data){
+
+                window.location.reload();
+
+
+            }
+
+        });
+
+    }
+</script>
+</html>

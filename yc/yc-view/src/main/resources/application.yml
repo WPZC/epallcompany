@@ -1,0 +1,27 @@
+server:
+  port: 8751
+  max-http-header-size: 80KB
+  tomcat:
+    uri-encoding: UTF-8
+  connection-timeout: 180000
+
+spring:
+  application:
+    name: ep-yc-view
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8750/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ReadTimeout: 120000 #设置超时时间
+  SocketTimeout: 30000 #设置连接超时时间
+
+fileurl:
+  pic: D:/temp-rainy/

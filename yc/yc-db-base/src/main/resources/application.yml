@@ -1,0 +1,37 @@
+server:
+  port: 8755
+  tomcat:
+    uri-encoding: UTF-8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8750/eureka/
+  instance:
+    prefer-ip-address: true
+  ribbon:
+    ReadTimeout: 120000 #设置超时时间
+    SocketTimeout: 30000 #设置连接超时时间
+
+spring:
+  application:
+    name: yc-db-base
+  datasource:
+    name: db-base
+    url: jdbc:mysql://localhost:3306/yc?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.epyc.ycdbbase.viewentity

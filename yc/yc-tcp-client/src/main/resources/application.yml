@@ -1,0 +1,32 @@
+server:
+  port: 8753
+  max-http-header-size: 800KB
+  tomcat:
+    accesslog:
+      buffered: true
+      directory: D:/logs/yc-tcp-client
+      enabled: true
+      file-date-format: .yyyy-MM-dd
+      pattern: common
+      prefix: yc_tcp_client
+      rename-on-rotate: false
+      request-attributes-enabled: false
+      rotate: true
+      suffix: .log
+spring:
+  application:
+    name: ep-yc-tcp-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8750/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ReadTimeout: 120000 #设置超时时间
+  SocketTimeout: 30000 #设置连接超时时间
+logging.level.org.hibernate.SQL: DEBUG
+logging:
+  config: classpath:logback-spring.xml
+  path: D:/logs/data/yc-tcp-client
+  file: D:/logs/data/yc-tcp-client/dataInfo.log

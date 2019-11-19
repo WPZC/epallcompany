@@ -1,0 +1,46 @@
+server:
+  port: 8754
+  max-http-header-size: 800KB
+  tomcat:
+    accesslog:
+      buffered: true
+      directory: D:/logs/ep-yc-tcp-analysis
+      enabled: true
+      file-date-format: .yyyy-MM-dd
+      pattern: common
+      prefix: ep_yc_tcp_analysis
+      rename-on-rotate: false
+      request-attributes-enabled: false
+      rotate: true
+      suffix: .log
+spring:
+  application:
+    name: ep-yc-tcp-analysis
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: wqy
+    password: 123456
+    virtual-host: /yc
+    listener:
+      simple:
+        acknowledge-mode: manual
+        default-requeue-rejected: false
+      direct:
+        acknowledge-mode: manual
+        default-requeue-rejected: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8750/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ReadTimeout: 120000 #设置超时时间
+  SocketTimeout: 30000 #设置连接超时时间
+logging.level.org.hibernate.SQL: DEBUG
+logging:
+  config: classpath:logback-spring.xml
+  path: D:/logs/data/ep-yc-tcp-analysis
+  file: D:/logs/data/ep-yc-tcp-analysis/dataInfo.log
+

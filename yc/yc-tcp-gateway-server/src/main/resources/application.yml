@@ -1,0 +1,32 @@
+server:
+  port: 8759
+  max-http-header-size: 80KB
+  tomcat:
+    accesslog:
+      buffered: true
+      directory: D:/logs/ep-yc-tcp-gateway-company
+      enabled: true
+      file-date-format: .yyyy-MM-dd
+      pattern: common
+      prefix: ep_yc_tcp_gateway_company
+      rename-on-rotate: false
+      request-attributes-enabled: false
+      rotate: true
+      suffix: .log
+
+spring:
+  application:
+    name: ep-yc-tcp-gateway-company
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8750/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ReadTimeout: 120000 #设置超时时间
+  SocketTimeout: 30000 #设置连接超时时间
+logging:
+  config: classpath:logback-spring.xml
+  path: D:/logs/data/ep-yc-tcp-gateway-company
+  file: D:/logs/data/ep-yc-tcp-gateway-company/dataInfo.log

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yc" />
+        <module name="yc-db-base" />
+        <module name="yc-gateway-mq" />
+        <module name="yc-server-eureka" />
+        <module name="yc-tcp-analysis" />
+        <module name="yc-tcp-client" />
+        <module name="yc-tcp-gateway-server" />
+        <module name="yc-view" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="yc-eureka" target="1.8" />
+      <module name="yc-eureka (1)" target="1.8" />
+      <module name="yc-eureka (2)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="yc-db-base" options="-parameters" />
+      <module name="yc-eureka" options="-parameters" />
+      <module name="yc-eureka (1)" options="-parameters" />
+      <module name="yc-eureka (2)" options="-parameters" />
+      <module name="yc-gateway-mq" options="-parameters" />
+      <module name="yc-server-eureka" options="-parameters" />
+      <module name="yc-tcp-analysis" options="-parameters" />
+      <module name="yc-tcp-client" options="-parameters" />
+      <module name="yc-tcp-gateway-server" options="-parameters" />
+      <module name="yc-view" options="-parameters" />
+    </option>
+  </component>
+</project>

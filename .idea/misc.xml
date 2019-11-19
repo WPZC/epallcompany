@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-server-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-tcp-gateway-server/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-tcp-analysis/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-db-base/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-view/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-tcp-client/pom.xml" />
+        <option value="$PROJECT_DIR$/yc/yc-gateway-mq/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/yc/yc-eureka/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://desktop-cim54m2/svn/yc/epall/branches" />
+                  <option value="https://desktop-cim54m2/svn/yc/epall/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://desktop-cim54m2/svn/yc/epall/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

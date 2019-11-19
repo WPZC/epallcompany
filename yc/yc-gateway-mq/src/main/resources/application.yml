@@ -1,0 +1,41 @@
+server:
+  port: 8757
+  max-http-header-size: 80KB
+  tomcat:
+    accesslog:
+      buffered: true
+      directory: D:/logs/yc-gateway-mq
+      enabled: true
+      file-date-format: .yyyy-MM-dd
+      pattern: common
+      prefix: yc_gateway_mq
+      rename-on-rotate: false
+      request-attributes-enabled: false
+      rotate: true
+      suffix: .log
+
+spring:
+  application:
+    name: yc-gateway-mq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: wqy
+    password: 123456
+    publisher-confirms: true
+    publisher-returns: true
+    virtual-host: /yc
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8750/eureka/
+  instance:
+    prefer-ip-address: true
+ribbon:
+  ReadTimeout: 120000 #设置超时时间
+  SocketTimeout: 30000 #设置连接超时时间
+logging:
+  config: classpath:logback-spring.xml
+  path: D:/logs/data/yc-gateway-mq
+  file: D:/logs/data/yc-gateway-mq/dataInfo.log
